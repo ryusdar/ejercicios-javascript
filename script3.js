@@ -148,20 +148,29 @@ selectFrutas.addEventListener("change", () => {
 });
  
 //9)Implementa un formulario con validación para correos electrónicos.
-const formgmail = document.getElementById("gamil1"); 
-const emailInput = document.getElementById("email");  
-const errorMsg = document.getElementById("errorEmail");
+const emailForm = document.createElement("form");
+const emailInput = document.createElement("input");
+emailInput.type = "email";
+emailInput.placeholder = "Escribe tu correo";
+const emailError = document.createElement("span");
+const emailSubmit = document.createElement("button");
+emailSubmit.textContent = "Enviar";
 
-formgmail.addEventListener("submit", function(event) {
-    const emailValue = emailInput.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+emailForm.appendChild(emailInput);
+emailForm.appendChild(emailError);
+emailForm.appendChild(emailSubmit);
+document.body.appendChild(emailForm);
 
-    if (!emailPattern.test(emailValue)) {
-        event.preventDefault(); 
-        errorMsg.style.display = "block"; // mostrar mensaje
-        emailInput.style.border = "2px solid red"; // marcar input
-    } else {
-        errorMsg.style.display = "none"; 
-        emailInput.style.border = "";
-    }
+emailForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const email = emailInput.value;
+  if (!email.includes("@")) {
+    emailError.textContent = "Correo no válido.";
+  } else {
+    emailError.textContent = "";
+    alert("Correo enviado correctamente.");
+  }
 });
+
+//10)Haz un evento que cambie el texto de un botón al hacer clic en él.
+
