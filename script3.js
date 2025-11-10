@@ -73,7 +73,7 @@ botonocul.addEventListener("click", function() {
     nuevoElemento.textContent = "Este es un nuevo párrafo agregado al contenedor.";
     conten.appendChild(nuevoElemento);
 
-//ejercicios del dom segunda parte
+//ejercicios del dom segunda parte-------finalizado
 
 //1)Crea un botón que muestre un mensaje en consola al hacer clic.
 

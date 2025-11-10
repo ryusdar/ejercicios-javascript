@@ -96,8 +96,8 @@ switch (delasemana) {
 
 
 // ejercicios 
-// 1 ---- primera parte finalizado
-
+// ---- primera parte finalizado
+//1)Escribe un programa que verifique si un número es positivo o negativo.
 let c = -5;
 
 if (c => 0) {
@@ -107,7 +107,7 @@ if (c => 0) {
     console.log("el numero es negativo ")
 }
 
-// 2
+// 2 Usa switch para imprimir el día de la semana según un número del 1 al 7.
 
 switch (diadelasemana) {
     case 1:
@@ -149,13 +149,14 @@ switch (diadelasemana) {
         break;
 }
 
-// 3 
+// 3 Haz un bucle for que imprima los números del 1 al 10.
+
 
 for (let i=0;  i<=10; i++) {
     console.log(i)
 
 }
-// 4
+// 4 Crea un programa que calcule el factorial de un número usando while.
 
 function factorial(n) {
 
@@ -174,7 +175,7 @@ function factorial(n) {
 }
 console.log(factorial(10)); 
 
-//5
+//5 Escribe un condicional que determine si una persona puede votar según su edad.
 let edad2=16;
 if (edad2 >= 18) {
     console.log("puede votar") 
@@ -182,7 +183,8 @@ if (edad2 >= 18) {
     console.log("no puede votar")
 }
 
-//6
+//6 Imprime los números pares entre 1 y 20 con un bucle for.
+
 for (let i = 0;  i<= 20; i++) {
     
     if (i % 2 === 0) {
@@ -192,7 +194,8 @@ for (let i = 0;  i<= 20; i++) {
     
 }
 
-//7
+//7 Usa switch para imprimir un mensaje dependiendo de la calificación (A, B, C, D, F).
+
 let calificacion= 2;
 switch (calificacion) {
     case 1:
@@ -217,7 +220,8 @@ switch (calificacion) {
         
         break;
 }
-//8
+//8 Haz un programa que pida dos números y los sume si ambos son positivos.
+
 let f =Number(prompt("ingrese un numero "));
 let v =Number(prompt("ingrese un numero "));
 let suma;
@@ -231,15 +235,26 @@ if (f >= 0 && v>=0) {
     alert("no se puede realizar la suma hay un numero negativo ")
 }
 
-//9
+//9 Escribe un bucle while que cuente de 10 a 1 en orden descendente.
+
 
 
 let sumatoria=0;
 sumatoria= (17 % 3);
 console.log("el residuo de la division es " + sumatoria);
 
-//10
+//10 Crea una calculadora básica que permita sumar o restar según el operador ingresado.
 
-
-
-
+let numero1= Number(prompt("ingrese el primer numero"));
+let numero2= Number(prompt("ingrese el segundo numero"));
+let operador= prompt("ingrese el operador (+ o -)");
+let resultado;
+if (operador === "+") {
+    resultado= numero1 + numero2;
+    alert("el resultado de la suma es " + resultado);  
+}else if (operador === "-") {
+    resultado= numero1 - numero2;
+    alert("el resultado de la resta es " + resultado);  
+}else{
+    alert("operador invalido");
+}
