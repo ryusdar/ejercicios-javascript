@@ -173,4 +173,10 @@ emailForm.addEventListener("submit", (event) => {
 });
 
 //10)Haz un evento que cambie el texto de un botón al hacer clic en él.
+const botoncambio = document.createElement("button");
+botoncambio.textContent = "Haz clic en mí";
+document.body.appendChild(botoncambio);
 
+botoncambio.addEventListener("click", () => {
+  botoncambio.textContent = "texto cambiado ";
+});
